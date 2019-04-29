@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.mmz'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.0.0'
+	//compile 'org.elasticsearch:elasticsearch:7.0.0'
+	compile group: 'org.elasticsearch', name: 'elasticsearch', version: '7.0.0'
+
+
+
+}
